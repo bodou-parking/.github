@@ -1,0 +1,25 @@
+name: Sync README
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  sync-readme:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v2
+
+    - name: Sync README
+      run: |
+        cp README.md profile/README.md
+        git add profile/README.md
+        git config user.email "action@github.com"
+        git config user.name "${{ github.actor }}"
+        git commit -m "Sync README.md" -a
+        git push

@@ -8,7 +8,7 @@ This is a parking reservation app that allows drivers to easily find and reserve
 
 The system consists of:
 
--   Client app: Cross-platform parking app for drivers including WeChat mini program
+-   Client app: Cross-platform parking app for drivers
 -   Management platform: Web dashboard for parking managers
 -   Backend service: Handles business logic and data
 -   Monitoring system: Tracks metrics and issues for devops
